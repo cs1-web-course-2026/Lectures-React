@@ -1,0 +1,50 @@
+.recipeCard {
+  font-family: 'Georgia', serif;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 36px;
+  width: 400px;
+  margin: 40px auto;
+  background: linear-gradient(145deg, #1e1e2e, #2a2a3e);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  color: #e2e2f0;
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: #f4a261;
+  margin-bottom: 28px;
+  text-shadow: 0 0 20px rgba(244, 162, 97, 0.4);
+}
+
+.heading {
+  color: #c9a97a;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(201, 169, 122, 0.25);
+  padding-bottom: 8px;
+  margin-bottom: 14px;
+}
+
+.list {
+  list-style-type: '🍪 ';
+  padding-left: 20px;
+}
+
+.listItem {
+  margin-bottom: 10px;
+  color: #cccce0;
+  font-size: 0.95rem;
+}
+
+.instructions {
+  line-height: 1.8;
+  color: #b0b0c8;
+  font-size: 0.95rem;
+}

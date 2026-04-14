@@ -1,0 +1,79 @@
+/* Підключіть шрифт у index.html:
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> */
+
+.container {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  padding: 20px;
+  border: 4px solid #333;
+  border-radius: 15px;
+  width: 300px;
+  background-color: #f0f8ff;
+  box-shadow: 5px 5px 0 #333;
+  margin: 20px auto;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.mood {
+  font-size: 90px;
+  animation: bounce 2s infinite;
+  display: block;
+  margin: 10px 0;
+}
+
+.label {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.barTrack {
+  height: 20px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  border: 2px solid #333;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.5s ease-in-out, background-color 0.3s;
+}
+
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  margin: 0 5px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 #333;
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.btnFeed { background-color: #2ecc71; }
+.btnPlay { background-color: #3498db; }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40%  { transform: translateY(-20px); }
+  60%  { transform: translateY(-10px); }
+}
