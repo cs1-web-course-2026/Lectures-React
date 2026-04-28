@@ -1,0 +1,22 @@
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.id-input {
+  width: 80px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--fg);
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+.id-input:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}

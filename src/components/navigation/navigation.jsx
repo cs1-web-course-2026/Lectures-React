@@ -1,15 +1,39 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import styles from './navigation.module.css';
+import { useTheme } from '../../context/theme-context';
+
+export const ThemeToggle = () => {
+    const { theme, toggleTheme } = useTheme();
+    const isDark = theme === 'dark';
+
+    return (
+        <div className={styles.themeToggleWrapper}>
+            <span className={styles.themeIcon}>{isDark ? '🌙' : '☀️'}</span>
+            <button
+                className={`${styles.toggleTrack} ${isDark ? styles.toggleDark : styles.toggleLight}`}
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+                role="switch"
+                aria-checked={!isDark}
+            >
+                <span className={styles.toggleThumb} />
+            </button>
+            <span className={styles.themeIcon}>{isDark ? '☀️' : '🌙'}</span>
+        </div>
+    );
+};
 
 export const Navigation = () => {
     return (
-        <nav>
-            <Link to="/">Home</Link> |
-            <Link to="/cookie-recepies">Cookie Recipe</Link> |
-            <Link to="/tamagochi">Tamagochi</Link> |
-            <Link to="/mouse-tracker">Mouse Tracker</Link> |
-            <Link to="/custom-hook">Custom Hook</Link> |
-            <Link to="/props-drilling">Props Drilling</Link> |
-            <Link to="/theme-provider">Theme Provider Demo</Link>
+        <nav className={styles.nav}>
+            <NavLink to="/" className={({ isActive }) => isActive ? styles.active : ''}>Home</NavLink>
+            <NavLink to="/cookie-recepies" className={({ isActive }) => isActive ? styles.active : ''}>Cookie Recipe</NavLink>
+            <NavLink to="/tamagochi" className={({ isActive }) => isActive ? styles.active : ''}>Tamagochi</NavLink>
+            <NavLink to="/mouse-tracker" className={({ isActive }) => isActive ? styles.active : ''}>Mouse Tracker</NavLink>
+            <NavLink to="/custom-hook" className={({ isActive }) => isActive ? styles.active : ''}>Custom Hook</NavLink>
+            <NavLink to="/props-drilling" className={({ isActive }) => isActive ? styles.active : ''}>Props Drilling</NavLink>
+            <NavLink to="/theme-provider" className={({ isActive }) => isActive ? styles.active : ''}>Theme Provider</NavLink>
+            <NavLink to="/pokemon-fetcher" className={({ isActive }) => isActive ? styles.active : ''}>Pokemon Fetcher</NavLink>
         </nav>
-    )
+    );
 };

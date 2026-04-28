@@ -45,15 +45,6 @@ export const MouseTrackerPage = () => {
       </button>
       {/* Монтуємо/демонтуємо компонент 'Tracker' */}
       {isVisible && <MouseTracker />}
-      <Card title="Картка прикладу" badge={'l' === 'dark' ? 'Dark' : 'Light'}>
-          <p className="muted">Цей текст використовує приглушений колір теми.</p>
-          <p>
-            Перейдіть за посиланням: <a className="link" href="#">Документація</a>
-          </p>
-          <div style={{ marginTop: '12px' }}>
-            <input className="input" placeholder="Введіть текст..." />
-          </div>
-        </Card>
     </div>
   );
 }

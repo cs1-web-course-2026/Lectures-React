@@ -1,6 +1,6 @@
 import React from 'react';
 import './custom-hook.css';
-import { useLocalStorage } from './hooks/use-local-storage'; // імпортуємо наш хук
+import { useLocalStorage } from '../../hooks/use-local-storage'; // хук тепер спільний для всього проєкту
 
 export const LocalStorageDemo = () => {
   const [name, setName] = useLocalStorage('username', 'Гість');

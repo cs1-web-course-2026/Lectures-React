@@ -1,4 +1,4 @@
-# CS3 Lectures — React 2026
+# CS1 Lectures — React 2026
 
 A React lecture demo project built with Vite, covering topics such as props drilling, custom hooks, context/theme providers, mouse tracking, and recipes.
 

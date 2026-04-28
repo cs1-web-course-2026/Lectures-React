@@ -1,34 +1,73 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '/vite.svg'
-import './home.css'
+import './home.css';
+
+const demos = [
+  {
+    to: '/cookie-recepies',
+    emoji: '🍪',
+    title: 'Cookie Recipe',
+    desc: 'Компонентна структура, props, списки',
+  },
+  {
+    to: '/tamagochi',
+    emoji: '🐣',
+    title: 'Tamagochi',
+    desc: 'useState, умовний рендеринг, події',
+  },
+  {
+    to: '/mouse-tracker',
+    emoji: '🖱️',
+    title: 'Mouse Tracker',
+    desc: 'useEffect, event listeners, cleanup',
+  },
+  {
+    to: '/custom-hook',
+    emoji: '🪝',
+    title: 'Custom Hook',
+    desc: 'useLocalStorage — власний хук',
+  },
+  {
+    to: '/props-drilling',
+    emoji: '🔩',
+    title: 'Props Drilling',
+    desc: 'Передача даних через рівні компонентів',
+  },
+  {
+    to: '/theme-provider',
+    emoji: '🎨',
+    title: 'Theme Provider',
+    desc: 'Context API, темна/світла тема',
+  },
+  {
+    to: '/pokemon-fetcher',
+    emoji: '⚡',
+    title: 'Pokemon Fetcher',
+    desc: 'fetch, useEffect, завантаження даних',
+  },
+];
 
 export const HomePage = () => {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="home">
+      <header className="home-header">
+        <div className="home-badge">CS1 · 2026</div>
+        <h1 className="home-title">
+          <span className="home-title-react">React</span> Lectures
+        </h1>
+        <p className="home-subtitle">
+          Інтерактивні демо до курсу. Обери тему для вивчення.
         </p>
+      </header>
+
+      <div className="demo-grid">
+        {demos.map(({ to, emoji, title, desc }) => (
+          <Link key={to} to={to} className="demo-card">
+            <span className="demo-emoji">{emoji}</span>
+            <h2 className="demo-title">{title}</h2>
+            <p className="demo-desc">{desc}</p>
+          </Link>
+        ))}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
