@@ -1,27 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styles from './navigation.module.css';
-import { useTheme } from '../../context/theme-context';
-
-export const ThemeToggle = () => {
-    const { theme, toggleTheme } = useTheme();
-    const isDark = theme === 'dark';
-
-    return (
-        <div className={styles.themeToggleWrapper}>
-            <span className={styles.themeIcon}>{isDark ? '🌙' : '☀️'}</span>
-            <button
-                className={`${styles.toggleTrack} ${isDark ? styles.toggleDark : styles.toggleLight}`}
-                onClick={toggleTheme}
-                aria-label="Toggle theme"
-                role="switch"
-                aria-checked={!isDark}
-            >
-                <span className={styles.toggleThumb} />
-            </button>
-            <span className={styles.themeIcon}>{isDark ? '☀️' : '🌙'}</span>
-        </div>
-    );
-};
+import { ThemeToggle } from '../ui/theme-toggle';
 
 export const Navigation = () => {
     return (

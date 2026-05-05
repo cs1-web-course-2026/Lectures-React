@@ -8,14 +8,14 @@ import { PropDrillingDemo } from './pages/props-drilling';
 import { ThemeProviderDemo } from './pages/theme-provider';
 import { PokemonFetcher } from './pages/pokemon-fetcher';
 import { Navigation } from './components/navigation';
-import { ThemeToggle } from './components/navigation';
+import { ThemeTogglePanel } from './components/theme-toggle-panel';
 import './App.css'
 
 function App() {
   return (
     <>
+      <ThemeTogglePanel />
       <Navigation />
-      <ThemeToggle />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cookie-recepies" element={<CookieRecipiesPage />} />

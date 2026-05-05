@@ -1,7 +1,7 @@
 // App.js
 import React, { useState } from 'react';
 
-// 5. Глибокий компонент #1
+// 4. Глибокий компонент #1
 // Цьому компоненту потрібен ТІЛЬКИ 'username'
 function Avatar({ username }) {
   console.log("Avatar рендериться");
@@ -12,7 +12,7 @@ function Avatar({ username }) {
   );
 }
 
-// 5. Глибокий компонент #2
+// 4. Глибокий компонент #2
 // Цьому компоненту потрібен ТІЛЬКИ 'theme'
 function ThemeDisplay({ theme }) {
   console.log("ThemeDisplay рендериться");
@@ -23,7 +23,7 @@ function ThemeDisplay({ theme }) {
   );
 }
 
-// 4. Компонент-посередник (рівень 3)
+// 3. Компонент-посередник (рівень 3)
 // Змушений приймати і 'user', і 'theme', хоча використовує ТІЛЬКИ 'theme'
 function Header({ user, theme }) {
   console.log("Header рендериться");

@@ -1,1 +1,1 @@
-export { Navigation, ThemeToggle } from "./navigation.jsx";
+export { Navigation } from "./navigation.jsx";
