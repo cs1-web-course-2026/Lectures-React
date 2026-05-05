@@ -12,13 +12,13 @@
 }
 
 .toggleButton {
-  border: 1px solid transparent;
+  border: 1px solid var(--border);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   border-radius: 8px;
-  background-color: #1a1a1a;
-  color: inherit;
+  background-color: var(--btn-bg);
+  color: var(--fg);
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s;
 }
@@ -28,7 +28,7 @@
 }
 
 .hint {
-  color: #888;
+  color: var(--fg-muted);
   font-size: 0.95rem;
 }
 
@@ -44,8 +44,3 @@
   box-shadow: 0 0 16px #646cff66;
 }
 
-@media (prefers-color-scheme: light) {
-  .toggleButton {
-    background-color: #f9f9f9;
-  }
-}

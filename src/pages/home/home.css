@@ -32,7 +32,7 @@
   font-weight: 700;
   line-height: 1.15;
   margin: 0;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--fg);
 }
 
 .home-title-react {
@@ -45,7 +45,7 @@
 .home-subtitle {
   margin: 0;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--fg-muted);
 }
 
 /* Grid */
@@ -63,8 +63,8 @@
   align-items: flex-start;
   gap: 0.4rem;
   padding: 1.25rem 1.25rem 1.4rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  border: 1px solid var(--nav-border);
   border-radius: 14px;
   text-decoration: none;
   color: inherit;
@@ -88,13 +88,13 @@
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--fg);
 }
 
 .demo-desc {
   font-size: 0.8rem;
   margin: 0;
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--fg-muted);
   line-height: 1.4;
   text-align: left;
 }
